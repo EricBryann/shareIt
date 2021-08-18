@@ -1,0 +1,40 @@
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  margin-bottom: 1.5vw;
+}
+
+.label {
+  grid-column: 1;
+  font-size: 18px;
+  margin-right: 12px;
+  font-weight: bold;
+}
+
+.input {
+  font-size: large;
+  grid-column: 2;
+  width: 100%;
+  height: 2.5vh;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.textarea {
+  width: 100%;
+}
+
+.error {
+  font-size: small;
+  position: relative;
+  color: red;
+}
+
+@media (max-width: 750px) {
+  .formRow {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+}

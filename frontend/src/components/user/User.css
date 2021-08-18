@@ -1,0 +1,47 @@
+.container {
+  margin: 1rem;
+  width: calc(30%);
+  min-width: 17.5rem;
+}
+
+.container a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  padding-top: 0.8rem;
+  color: white;
+  background: #240499;
+}
+
+.container a:hover,
+.container a:active {
+  background: #00c3ff;
+}
+
+.card.content {
+  padding: 0;
+}
+
+.image {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 0.7rem;
+}
+
+.info h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: normal;
+  color: white;
+}
+
+.container:hover h2,
+.container:active h2,
+.container:hover h3,
+.container:active h3 {
+  color: #292929;
+}

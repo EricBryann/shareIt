@@ -1,0 +1,56 @@
+.button {
+  cursor: pointer;
+  height: 2vw;
+  border-radius: 4px;
+  padding: 0 1vw;
+  font-size: 16px;
+  margin: 0.5vh 0.5vw;
+  border: none;
+  min-height: 30px;
+}
+
+.filled {
+  color: white;
+  background-color: rgb(2, 125, 181);
+  box-shadow: 5px 5px 50px 5px rgba(46, 49, 216, 0.3);
+}
+
+.filled-red {
+  color: white;
+  background-color: rgb(224, 97, 97);
+}
+
+.outline {
+  color: rgb(2, 125, 181);
+  border: 2px solid rgb(2, 125, 181);
+  background-color: white;
+}
+
+.button-normal {
+  text-decoration: none;
+  color: black;
+}
+
+.button-danger {
+  background: #830000;
+  border-color: #830000;
+  color: white;
+}
+
+.button-danger:hover,
+.button-danger:active {
+  background: #f34343;
+  border-color: #f34343;
+}
+
+.button-inverse {
+  border: 2px solid #ff0055;
+  background: transparent;
+  color: #ff0055;
+}
+
+.button-inverse:hover,
+.button-inverse:active {
+  color: white;
+  background: #ff0055;
+}
