@@ -37,6 +37,7 @@ export default function AddPlaces() {
 
   useEffect(() => {
     setValue("image", file);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [file]);
 
   const createHandler = async (formValues) => {

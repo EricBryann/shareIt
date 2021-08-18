@@ -11,6 +11,7 @@ export default function AllUsers({ users, filter, setFilter }) {
         user.name.toLowerCase().includes(filter.toLowerCase())
       )
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filter]);
   if (userArray.length === 0) {
     return (

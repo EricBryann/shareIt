@@ -47,6 +47,7 @@ export default function UpdatePlace() {
       } catch (err) {}
     };
     fetchPlace();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sendRequest, placeId]);
 
   async function placeUpdateSubmitHandler(formValues) {

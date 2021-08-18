@@ -91,6 +91,7 @@ export default function Auth() {
 
   useEffect(() => {
     setValue("image", file);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [file]);
 
   return (
