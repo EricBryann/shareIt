@@ -38,11 +38,9 @@ const signupValidator = yup.object().shape({
 
 export default function Auth() {
   const auth = useContext(AuthContext);
-  const [email, setEmail] = useState("");
   const [isLogin, setIsLogin] = useState(true);
-  const [password, setPassword] = useState("");
   const [file, setFile] = useState();
-  const [name, setName] = useState("");
+
   const { isLoading, error, sendRequest, clearError } = useHttp();
   const { register, setValue, handleSubmit, getValues, ...methods } = useForm({
     reValidateMode: "onChange",
@@ -50,11 +48,6 @@ export default function Auth() {
     //validation
     resolver: yupResolver(isLogin ? loginValidator : signupValidator),
   });
-
-  useEffect(() => {
-    setPassword("");
-    setEmail("");
-  }, [isLogin]);
 
   const mainHandler = async (formValues) => {
     if (isLogin) {
@@ -77,11 +70,12 @@ export default function Auth() {
       }
     } else {
       try {
+        const { email, password, name, image } = formValues;
         const formData = new FormData(); //Use FormData for images
         formData.append("email", email);
         formData.append("name", name);
         formData.append("password", password);
-        formData.append("image", file);
+        formData.append("image", image);
         const responseData = await sendRequest(
           `${process.env.REACT_APP_BACKEND_URL}/users/signup`,
           "POST",
