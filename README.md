@@ -1,6 +1,10 @@
 # shareIt
 
-The app is available at https://mern-appl.web.app/
+The app is available at https://share-it.vercel.app/
+
+Here is an account you may wish to use:
+email: test@gmail.com
+password: tester
 
 The app simulates a social media app, where a user can sign up or login, post pictures with captions, or view what other users have posted. The user can also edit or delete their posts.
 
